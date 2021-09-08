@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<table>
+    <tr>
+        <td>
+            <input type="number" id="nhapso1">
+        </td>
+        <td>
+            <input type="number" id="nhapso2">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick="addition()">Cộng</button>
+            <button type="button" onclick="subtraction()">Trừ</button>
+        </td>
+        <td>
+            <button type="button" onclick="multiplication()">Nhân</button>
+            <button type="button" onclick="division()">Chia</button>
+        </td>
+    </tr>
+</table>
+<p>Kết quả: <span id="kq"></span></p>
+<script>
+    function addition() {
+        let so1 = parseInt(document.getElementById('nhapso1').value);
+        let so2 = parseInt(document.getElementById('nhapso2').value);
+        let add = so1 + so2
+        document.getElementById('kq').innerHTML = add;
+    }
+
+    function subtraction() {
+        let so1 = document.getElementById('nhapso1').value;
+        let so2 = document.getElementById('nhapso2').value;
+        let sub = so1 - so2
+        document.getElementById('kq').innerHTML = sub;
+    }
+
+    function multiplication() {
+        let so1 = document.getElementById('nhapso1').value;
+        let so2 = document.getElementById('nhapso2').value;
+        let mul = so1 * so2
+        document.getElementById('kq').innerHTML = mul;
+    }
+
+    function division() {
+        let so1 = document.getElementById('nhapso1').value;
+        let so2 = document.getElementById('nhapso2').value;
+        let divi = so1 / so2
+        document.getElementById('kq').innerHTML = divi;
+    }
+
+    </script>
+
+</body>
+</html>

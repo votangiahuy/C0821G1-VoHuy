@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td>
+                <label>Amount</label><br>
+                <input type="number" id="amount">
+            </td>
+            <td>
+                <label style="text-align: center">From Currency</label><br>
+                <select style="width: 100px" id="from">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <label>To Currency</label><br>
+                <select style="width: 100px" id="to">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" onclick="convert()">Convert</button>
+            </td>
+        </tr>
+        <tr>
+            <td><p id="ketqua">Kết quả: </p></td>
+        </tr>
+    </table>
+
+</form>
+<script>
+    function convert() {
+        let amount = document.getElementById('amount').value;
+        let from = document.getElementById('from').value;
+        let to = document.getElementById('to').value;
+        let result;
+        if (from === "VND" && to === "USD") {
+            result = amount / 23000
+        } else if (from === "USD" && to === "VND") {
+            result = amount * 23000
+        } else {
+            result = amount
+        }
+        document.getElementById('ketqua').innerText="Số tiền chuyển đổi là: " + result;
+        //document.write("Số tiền chuyển đổi là: " + result)
+    }
+
+    </script>
+
+</body>
+</html>
