@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let number = parseInt(prompt("Nhập số kiểm tra: "));
+  let count = 0;
+  for (let x = 2; count < number; x++) {
+    let test = true;
+    for (let i = 2; i < x; i++) {
+      if (x % i === 0) {
+        test = false;
+        break;
+      }
+    }
+    if (test === true) {
+      count += 1;
+      document.write(x);
+      document.write('<br>');
+    }
+  }
+</script>
+
+</body>
+</html>
