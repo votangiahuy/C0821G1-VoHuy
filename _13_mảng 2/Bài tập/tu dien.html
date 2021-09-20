@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="English" placeholder="Eng"/>
+<button id="trans" onclick="trans()"/>
+Translate</button>
+<input type="text" id="display" placeholder="Viet"/>
+<script>
+  let eng = ["dog", "cat", "bird"];
+  let viet = ["chó", "mèo", "chim"];
+
+  function trans() {
+    let English = document.getElementById("English").value;
+    let check = false;
+    for (let i = 0; i < eng.length; i++) {
+      if (English === eng[i]) {
+        check = true;
+        document.getElementById("display").value = viet[i];
+      }
+    }
+    if (check === false) {
+      document.write('Không tìm thấy');
+    }
+  }
+
+  //  Cách khai báo index//
+  //      let index = -1 ;
+  //  //Tìm từ trognmangr 2, nếu tìm thấy thì gán vị trí của từ đó trong mảng = index.//
+  //      for (let i = 0; i < arr2.length; i++){
+  //          if (arr2[i] === text){
+  //          index = i;
+  //         }
+  //     }
+  //  //Nếu index = -1 tức là từ nhập vào sẽ ko được tìm thấy, vì -1 là giá trị mặc định mình gán khi khai báo.//
+  //     if (index === -1){
+  //         document.getElementById("result").innerText = "Not found";
+  //     } else {
+  //         document.getElementById("result").innerText = arr1[index];
+  //     }
+</script>
+
+</body>
+</html>
