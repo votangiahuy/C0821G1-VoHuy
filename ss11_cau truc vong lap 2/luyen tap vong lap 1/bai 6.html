@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = 30
+    let count = 0
+    let n = 7
+    let ketQua = 0
+    while (count < num) {
+        if (n % 7 === 0) {
+            count++
+            ketQua += n
+            document.write(n + "</br>")
+        }
+        n++
+    }
+    document.write("tổng 30 số chia hết cho 7 là " + ketQua)
+</script>
+</body>
+</html>
