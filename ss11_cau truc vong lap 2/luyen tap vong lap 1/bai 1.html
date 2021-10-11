@@ -8,10 +8,12 @@
 <h3>Sử dụng vòng lặp để đếm từ 1 đến 100</h3>
 <script>
     var text = ""
-    for ( i = 0 ; i < 100 ; i++ ){
-        text += "The number is" + i + "<br>"
+    for ( i = 0 ; i <= 100 ; i++ ) {
+        document.write(i + '<br>')
+        if (i == 99) {
+            alert("Đã hoàn thành")
+        }
     }
-    alert("đã hoàn thành")
 </script>
 </body>
 </html>
