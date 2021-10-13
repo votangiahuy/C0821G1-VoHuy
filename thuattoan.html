@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script !src="">
+        let arrA = [];
+    let arrB = [];
+
+    function addMang() {
+        let soLuong;
+        do {
+            soLuong = parseInt(prompt("mời nhập số lượng"));
+            if (soLuong >0 && soLuong<20){
+                break;
+            }
+        } while (true);
+        for (let i = 0; i < soLuong; i++) {
+            let nhap = parseInt(prompt("mời nhập phần tử thứ " + (i + 1)));
+            arrA.push(nhap);
+        }
+        document.write(arrA);
+
+    }
+
+    function kiemTraSoNguyenTo(nhap) {
+        if (nhap < 2) {
+            return true;
+        }
+        for (let i = 2; i <= Math.sqrt(nhap); i++) {
+            if (nhap % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function xuatSoNguyenTo() {
+        for (let i = 1; i < arrA.length; i++) {
+            if (kiemTraSoNguyenTo(arrA[i])) {
+                arrB.push(arrA[i]);
+            }
+        }
+        document.write(arrB);
+
+
+    }
+
+    document.write("Mảng A bạn đã nhập vào =");
+    addMang();
+    document.write('<br/>');
+    document.write("Mảng B các số nguyên tố =");
+    xuatSoNguyenTo();
+</script>
+
+</body>
+</html>
