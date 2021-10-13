@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    Phí thuê bao bắt buộc là 45 nghìn vnd. <br>
+    600 đồng cho mỗi gọi của 50 phút đầu tiên. <br>
+    400 đồng cho mỗi phút gọi của 150 phút tiếp theo. <br>
+    200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên. <br>
+</p>
+<script>
+
+    let soPhutGoi = parseInt(prompt(" nhập số phút gọi trong 1 tháng", " "))
+
+
+    if (soPhutGoi <= 50) {
+        alert("số tiền phải trả là " + soPhutGoi * 600 + 25000)
+
+    } else if (soPhutGoi <= 150) {
+        alert("số tiền phải trả là " + (soPhutGoi - 50) * 400 + 25000 + 50 * 600)
+    } else if (soPhutGoi > 200) {
+        alert(" số tiền phải trả là" + (soPhutGoi - 200) * 200 + 25000 + 50 * 600 + 400 * 150)
+    }
+
+
+</script>
+</body>
+</html>
