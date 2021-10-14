@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [ 1, 2, 4 ,25 ,5, 9, 6 , 12 , 15 , 5, 20];
+    let max = arr[0];
+    let sum = 0 ;
+    for (let i = 0 ; i < arr.length; i++){
+        if (arr[i] > max ){
+            max = arr[i];
+        }
+        sum = (sum + arr[i]);
+
+    }
+    let tb = sum / arr.length ;
+    document.write("Số Lớn Nhất Trong Mảng Bằng : "+max+"</br>");
+    document.write("Trung Bình Cộng Các Phần Tử Trong Mảng bằng :"+tb);
+</script>
+
+</body>
+</html>

@@ -6,16 +6,17 @@
 </head>
 <body>
 <script>
-    let array = []
-    let max = 0;
-    let index =0;
-    for(let i=0 ; i<10 ; i++);
-    let value = prompt('nhập số' + i );
-    array[i] = value;
-    if(array[i] > max) {
-        max = array[i];
-        index = i
-    }  alert("max: " + max + " at position " + index);
+    let arr = [ 1, 2, 4 ,25 ,5, 9, 6 , 12 , 15 , 5, 20];
+    let max = arr[0];
+    let indexMax = 0;
+    for (let i = 0 ; i < arr.length ; i++){
+        if (arr[i] > max){
+            max = arr[i];
+            indexMax = i ;
+        }
+    }document.write("Số lớn nhất trong mảng là :" + max );
+    document.write("Vị trí của số lớn nhất = "+indexMax);
+
 </script>
 </body>
 </html>
