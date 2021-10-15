@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <input id="text1" placeholder="Enter foot">
+    <button onclick="convertMeter()">Convert Meters</button>
+    Result
+    <h1 id="result1"></h1>
+</p>
+<p>
+    <input id="text2" placeholder="Enter meter">
+    <button onclick="converFoot()">Convert Meters</button>
+    Result
+    <h1 id="result2"></h1>
+</p>
+<script>
+    function convertMeter() {
+        let feet = parseInt(document.getElementById("text1").value);
+        let met = 0.305 * feet;
+        document.getElementById("result1").innerHTML= met + "meters";
+    }
+    function converFoot() {
+        let meter = parseInt(document.getElementById("text2").value);
+        let foot = 3.279 * meter;
+        document.getElementById("result2").innerHTML= foot + "feet";
+    }
+</script>
+</body>
+</html>
