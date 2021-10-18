@@ -9,8 +9,27 @@
 let star1 = ['Polaris','Aldebaran','Deneb','Vega','Altair','Dubhe','Regulus'];
 let star2 = [ 'Ursa Minor','Tarurus','Cygnus','Lyra','Aquila','Ursa Major','Leo'];
 function chuoi(string) {
-    
+    let index1;
+    let value1;
+    let check = true;
+    for(let i = 0 ; i < mang1.length ; i++) {
+        check = true;
+        if(string === mang1[i]) {
+                index1 = mang1.indexOf(string);
+                value1 = mang2[index1];
+                break;
+        }else  {
+            check = false;
+        }
+    }
+    if(check === false){
+        alert("không tìm thấy tên :");
+    }
+    return value1;
 }
+let nhap = prompt("nhập ; ");
+let ketqua = chuoi(nhap)
+    document.write(ketqua)
 </script>
 </body>
 </html>

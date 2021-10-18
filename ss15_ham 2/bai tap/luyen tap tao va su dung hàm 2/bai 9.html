@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function arrayNum(a) {
+        let array = [5, 5, 5, 2, 2, 2, 2, 2, 9, 4];
+        let count = {} ;
+        for (let i = 0; i < array.length; i++) {
+            let num = array[i];
+            count[num] = count[num] ? count[num] + 1 : 1;
+        } if (x === 5 ){
+            alert('Số lần xuất hiện trong chuỗi là :' + count[5]);
+        }else if (x === 2 ){
+            alert('Số lần xuất hiện trong chuỗi là :' + count[2]);
+        }else if (x === 9 ) {
+            alert('Số lần xuất hiện trong chuỗi là :' + count[9]);
+        }else if (x === 4 ) {
+            alert('Số lần xuất hiện trong chuỗi là :' + count[4]);
+        }else{
+            alert('-1')
+        }
+    }let x = parseInt(prompt('Nhập kí tự cần kiểm tra trong mảng : '))
+    arrayNum(x)
+</script>
+</body>
+</html>
